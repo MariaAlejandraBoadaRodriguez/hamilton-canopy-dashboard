@@ -26,7 +26,6 @@ header{display:flex;align-items:flex-end;justify-content:space-between;border-bo
 .hstat .val{font-family:'DM Mono',monospace;font-size:1.3rem;font-weight:500;color:var(--c-green);text-align:right}
 .hstat .lbl{font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em}
 
-/* SCENARIO SELECTOR */
 .scenario-selector{display:flex;gap:8px;margin-bottom:16px;align-items:center;flex-wrap:wrap}
 .scenario-selector .ss-label{font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-right:4px}
 .yr-btn{padding:9px 28px;border-radius:2px;border:1px solid var(--border);background:var(--panel);color:var(--muted);font-family:'DM Mono',monospace;font-size:0.82rem;letter-spacing:0.1em;cursor:pointer;transition:all 0.2s;font-weight:500}
@@ -34,10 +33,10 @@ header{display:flex;align-items:flex-end;justify-content:space-between;border-bo
 .yr-btn.s2030.active{background:var(--c-green);border-color:var(--c-green);color:#fff}
 .yr-btn.s2050.active{background:var(--c-amber);border-color:var(--c-amber);color:#000}
 .yr-btn.s2080.active{background:var(--c-red);border-color:var(--c-red);color:#fff}
+.yr-btn.s-today.active{background:#455A64;border-color:#455A64;color:#fff}
 
 .page-grid{display:grid;grid-template-columns:290px 1fr;gap:16px;align-items:start}
 
-/* SLIDERS PANEL */
 .sliders-panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:18px;position:sticky;top:16px}
 .sp-title{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .sp-title::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--c-green);display:inline-block}
@@ -60,12 +59,10 @@ input[type=range].sl-rain::-webkit-slider-thumb{background:var(--c-blue)}
 .accum-val{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--c-green)}
 .accum-sub{font-size:0.65rem;color:var(--muted);margin-top:2px;font-family:'DM Mono',monospace}
 
-/* CONTENT */
 .content-area{display:flex;flex-direction:column;gap:14px}
 .section-title{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;display:flex;align-items:center;gap:8px}
 .section-title::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--c-green);display:inline-block}
 
-/* CLIMATE STRIP */
 .climate-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .clim-card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:12px;position:relative;overflow:hidden}
 .clim-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent,var(--c-green))}
@@ -75,14 +72,12 @@ input[type=range].sl-rain::-webkit-slider-thumb{background:var(--c-blue)}
 .clim-delta{font-family:'DM Mono',monospace;font-size:0.6rem;margin-top:4px}
 .delta-ok{color:var(--c-green)} .delta-warn{color:var(--c-amber)} .delta-crit{color:var(--c-red)}
 
-/* SCENARIO BAR */
 .scen-bar{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:11px 14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .scen-tag{font-family:'DM Mono',monospace;font-size:0.64rem;padding:3px 10px;border-radius:2px;font-weight:500;text-transform:uppercase;white-space:nowrap}
 .scen-desc{font-size:0.7rem;color:var(--muted);flex:1}
 .scen-factors{display:flex;gap:14px;flex-wrap:wrap}
 .sf{font-family:'DM Mono',monospace;font-size:0.63rem;color:var(--muted);white-space:nowrap}
 
-/* ACTIONS */
 .actions-metrics-grid{display:grid;grid-template-columns:1fr 310px;gap:14px}
 .action-list{display:flex;flex-direction:column;gap:8px}
 .action-card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:13px 15px;border-left:3px solid var(--c-green);animation:fadeUp 0.3s ease both}
@@ -105,7 +100,6 @@ input[type=range].sl-rain::-webkit-slider-thumb{background:var(--c-blue)}
 .cb-text{font-size:0.7rem;color:var(--muted)}
 .cb-text strong{color:var(--c-green);font-family:'DM Mono',monospace}
 
-/* METRICS SIDE */
 .metrics-side{display:flex;flex-direction:column;gap:10px}
 .metric-block{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:14px}
 .mb-title{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
@@ -114,15 +108,6 @@ input[type=range].sl-rain::-webkit-slider-thumb{background:var(--c-blue)}
 .kpi-val{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;line-height:1;transition:color 0.3s}
 .kpi-lbl{font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:1px}
 
-/* HEATMAP */
-.heatmap-grid{display:grid;grid-template-columns:88px repeat(15,1fr);gap:2px;font-family:'DM Mono',monospace;font-size:0.57rem}
-.hm-header{color:var(--muted);padding:3px;text-align:center;writing-mode:vertical-rl;transform:rotate(180deg);height:60px}
-.hm-row-label{color:var(--muted);padding:3px 5px;display:flex;align-items:center;white-space:nowrap;font-size:0.55rem;cursor:pointer}
-.hm-row-label:hover{color:var(--text)}
-.hm-cell{height:22px;border-radius:2px;cursor:pointer;position:relative;transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
-.hm-cell:hover::after{content:attr(data-tip);position:absolute;bottom:110%;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:4px 8px;border-radius:3px;font-size:0.59rem;white-space:nowrap;z-index:100;pointer-events:none;border:1px solid #444}
-
-/* WARD DETAIL DRAWER */
 .drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:200;display:none;align-items:flex-start;justify-content:flex-end}
 .drawer-overlay.open{display:flex}
 .drawer{background:#fff;width:400px;height:100vh;overflow-y:auto;border-left:1px solid var(--border);padding:28px;animation:slideIn 0.25s ease}
@@ -153,7 +138,6 @@ input[type=range].sl-rain::-webkit-slider-thumb{background:var(--c-blue)}
 .bar-mini{height:5px;background:var(--panel2);border-radius:2px;overflow:hidden;margin-top:3px;width:100%}
 .bar-mini-fill{height:100%;border-radius:2px;transition:width 0.5s}
 
-/* EQUITY PANEL */
 .equity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
 .eq-card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:12px;position:relative;overflow:hidden}
 .eq-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
@@ -168,35 +152,13 @@ input[type=range].sl-rain::-webkit-slider-thumb{background:var(--c-blue)}
 .eq-row .val{font-family:'DM Mono',monospace;font-weight:500}
 .eq-bar{height:4px;border-radius:2px;margin-top:3px;transition:width 0.6s cubic-bezier(0.4,0,0.2,1)}
 
-/* PRIORITY — CRITICAL WARDS CARDS */
 .critical-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
 .critical-count{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);padding:3px 10px;border-radius:2px;background:var(--panel);border:1px solid var(--border)}
-.critical-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
-.crit-card{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:12px 14px;cursor:pointer;transition:background 0.15s,border-color 0.15s;position:relative;overflow:hidden}
-.crit-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
-.crit-card.urg-critical::before{background:var(--c-red)}
-.crit-card.urg-high::before{background:var(--c-amber)}
-.crit-card.urg-medium::before{background:var(--c-green)}
-.crit-card:hover{background:var(--panel2);border-color:#bbb}
-.crit-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
-.crit-score{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1;flex-shrink:0}
-.crit-name{font-size:0.78rem;font-weight:600;color:var(--white);line-height:1.2}
-.crit-sub{font-size:0.62rem;color:var(--muted);margin-top:2px}
-.crit-bar-track{height:4px;background:#e0e0e0;border-radius:2px;overflow:hidden;margin-bottom:6px}
-.crit-bar-fill{height:100%;border-radius:2px;transition:width 0.5s}
-.crit-badges{display:flex;gap:5px;flex-wrap:wrap}
 .crit-se{font-family:'DM Mono',monospace;font-size:0.56rem;padding:2px 7px;border-radius:2px}
 .crit-nivel{font-family:'DM Mono',monospace;font-size:0.56rem;padding:2px 7px;border-radius:2px;white-space:nowrap}
-.crit-trees{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);margin-top:5px}
-.crit-trees span{color:var(--c-green);font-weight:500}
 .non-critical-summary{margin-top:8px;padding:8px 12px;background:var(--panel);border:1px solid var(--border);border-radius:4px;font-size:0.68rem;color:var(--muted);display:flex;align-items:center;gap:10px}
 .ncs-dot{width:6px;height:6px;border-radius:50%;background:var(--c-green);flex-shrink:0}
 
-.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.chart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:14px}
-canvas{max-width:100%}
-
-/* ACTION COMPLETION CHECKBOX */
 .action-footer{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:8px;border-top:1px solid var(--border2)}
 .action-check-wrap{display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
 .action-checkbox{width:18px;height:18px;border-radius:3px;border:2px solid var(--border);background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;cursor:pointer}
@@ -208,9 +170,7 @@ canvas{max-width:100%}
 .action-impact.positive{color:var(--c-green)}
 .action-card.completed{opacity:0.65;border-left-color:var(--c-green)!important}
 .action-card.completed .ac-title{text-decoration:line-through;text-decoration-color:rgba(0,0,0,0.3)}
-/* CANOPY LOSS INDICATOR in climate strip */
-.canopy-loss-badge{font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--c-red);margin-top:3px}
-/* COMPLIANCE SUMMARY BAR */
+
 .compliance-bar{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:10px 14px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:-6px}
 .cb-item{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)}
 .cb-item strong{font-weight:500}
@@ -220,6 +180,17 @@ canvas{max-width:100%}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--panel)}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* Legend for stress factors */
+.stress-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;margin-bottom:2px}
+.stress-chip{font-family:'DM Mono',monospace;font-size:0.57rem;padding:2px 8px;border-radius:2px;display:flex;align-items:center;gap:5px}
+.stress-chip::before{content:'';width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0}
+.sc-hot::before{background:var(--c-red)}
+.sc-night::before{background:var(--c-amber)}
+.sc-rain::before{background:var(--c-blue)}
+.sc-hot{background:rgba(211,47,47,0.08);color:#B71C1C}
+.sc-night{background:rgba(249,168,37,0.12);color:#E65100}
+.sc-rain{background:rgba(21,101,192,0.1);color:#0D47A1}
 </style>
 </head>
 <body>
@@ -240,7 +211,8 @@ canvas{max-width:100%}
 
 <div class="scenario-selector">
   <span class="ss-label">Scenario →</span>
-  <button class="yr-btn s2030 active" onclick="setYear(2030)">2030</button>
+  <button class="yr-btn s-today active" onclick="setYear('today')">Today</button>
+  <button class="yr-btn s2030" onclick="setYear(2030)">2030</button>
   <button class="yr-btn s2050" onclick="setYear(2050)">2050</button>
   <button class="yr-btn s2080" onclick="setYear(2080)">2080</button>
 </div>
@@ -302,9 +274,10 @@ canvas{max-width:100%}
 
     <!-- EQUITY PANEL -->
     <div>
-      <div class="section-title" style="margin-bottom:10px">Green Equity Gap — by Socioeconomic Level</div>
-      <div class="equity-grid" id="equity-grid"></div>
-      <div style="font-size:0.65rem;color:var(--muted);font-family:'DM Mono',monospace">* Effective Green Area = base × thermal retention (degradation from days >30°C). Projected GHG rises with heat due to increased AC use.</div>
+      <div class="section-title" style="margin-bottom:6px" id="equity-title">Green Equity Gap — by Socioeconomic Level</div>
+      <!-- Dynamic stress factor legend -->
+      <div class="stress-legend" id="stress-legend"></div>
+      <div class="equity-grid" id="equity-grid" style="margin-top:8px"></div>
     </div>
 
     <!-- ACTIONS + CRITICAL WARDS -->
@@ -318,7 +291,6 @@ canvas{max-width:100%}
           </div>
           <div class="action-list" id="action-list"></div>
         </div>
-        <!-- RIGHT SIDE: critical wards only -->
         <div class="metrics-side">
           <div class="metric-block" style="padding:12px">
             <div class="critical-header" style="margin-bottom:8px">
@@ -344,10 +316,9 @@ canvas{max-width:100%}
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 // ============================================================
-// SHEET 1 — Planting Priority (real data)
+// WARD DATA
 // ============================================================
 const WARD_DATA = [
   { id:'W2',  ward:'Ward 2',  nombre:'Downtown',            indice:0.877, nivel:'1 - Critical', ingreso:67900,  densidad:6263.3, verde:85.52,  haVerde1000:13.65,  parques:53,  ghg:100.48, ghgTotal:3725.7,  electricidad:15519274.6, instalaciones:14, compIngreso:1.000, compVerde:0.805, compDensidad:1.000, compGhg:0.260, nivelSE:'Low',         estrategia:'IMMEDIATE ACTION — Massive planting on public roads and residential corridors' },
@@ -368,71 +339,92 @@ const WARD_DATA = [
 ];
 
 // ============================================================
-// SHEET 2 — Brecha Equidad Verde
+// EQUITY DATA (aggregated by SE level)
 // ============================================================
 const EQUITY_DATA = [
-  { nivel:'Low',         color:'var(--c-red)',   n:2, ingreso:70700,   densidad:4556.5, verde:53.6,  haP1000:10.6,  ghg:93.9,  parques:38.0 },
-  { nivel:'Medium',      color:'var(--c-amber)', n:4, ingreso:86625,   densidad:2489.8, verde:194.6, haP1000:75.1,  ghg:51.2,  parques:42.2 },
-  { nivel:'Medium-High', color:'var(--c-blue)',  n:6, ingreso:118750,  densidad:1184.2, verde:230.1, haP1000:521.7, ghg:97.5,  parques:41.3 },
-  { nivel:'High',        color:'var(--c-green)', n:3, ingreso:167733,  densidad:1158.0, verde:176.7, haP1000:952.0, ghg:8.0,   parques:46.7 },
+  { nivel:'Low',         color:'var(--c-red)',   n:"", ingreso:162600,   densidad:154, verde:297,  haP1000:10.6,  canopyBlock:482.98, parques:38.0 },
+  { nivel:'Medium',      color:'var(--c-amber)', n:"", ingreso:131000,   densidad:129, verde:198, haP1000:75.1,  canopyBlock:339.80, parques:42.2 },
+  { nivel:'Medium-High', color:'var(--c-blue)',  n:"", ingreso:89500,  densidad:2073, verde:295, haP1000:521.7, canopyBlock:370.17, parques:41.3 },
+  { nivel:'High',        color:'var(--c-green)', n:"", ingreso:67900,  densidad:6263, verde:85.5, haP1000:952.0, canopyBlock:362.43, parques:46.7 },
 ];
 
 // ============================================================
-// CORE DATA & STATE
+// CORE STATE
 // ============================================================
 const YEARS = [2030, 2050, 2080];
 const BASELINE = {
-  2030:{ hotDays:20, nights:6,  rain:10 },
-  2050:{ hotDays:34, nights:13, rain:17 },
-  2080:{ hotDays:60, nights:30, rain:38 },
+  'today':{ hotDays:15, nights:4,  rain:8  },
+  2030:   { hotDays:20, nights:6,  rain:10 },
+  2050:   { hotDays:34, nights:13, rain:17 },
+  2080:   { hotDays:60, nights:30, rain:38 },
 };
 
-let currentYear = 2030;
+let currentYear = 'today';
 const userClimate = {};
 const planted = {};
 WARD_DATA.forEach(w => planted[w.id] = 0);
-let charts = {};
 
-// Baseline critical ward IDs per year — computed ONCE when no actions are checked
-// A ward can only leave this set (if actions reduce its urgency), never join it
-const baselineCritical = { 2030: null, 2050: null, 2080: null }; // null = not yet computed
-
-// ============================================================
-// ACTION COMPLETION STATE
-// actionDone[year][actionKey] = true/false
-// actionImpact[year][actionKey] = trees (set when action is rendered)
-// ============================================================
-const actionDone   = { 2030:{}, 2050:{}, 2080:{} };
-const actionImpact = { 2030:{}, 2050:{}, 2080:{} }; // trees each action would plant
-
-// Trees planted in CURRENT year from checked actions
-function treesFromCurrentActions(year) {
-  const done   = actionDone[year]   || {};
-  const impact = actionImpact[year] || {};
-  return Object.keys(done)
-    .filter(k => done[k])
-    .reduce((sum, k) => sum + (impact[k] || 0), 0);
-}
-
-// Execution rate for prior-year credit calculation
-function completionRate(year) {
-  const done = actionDone[year] || {};
-  const keys = Object.keys(done);
-  if (keys.length === 0) return 0;
-  const checked = keys.filter(k => done[k]).length;
-  return checked / keys.length;
-}
+const baselineCritical = { 'today': null, 2030: null, 2050: null, 2080: null };
+const actionDone   = { 'today':{}, 2030:{}, 2050:{}, 2080:{} };
+const actionImpact = { 'today':{}, 2030:{}, 2050:{}, 2080:{} };
 
 // ============================================================
-// CANOPY DEGRADATION — more hot days = less effective verde
+// CANOPY DEGRADATION — THREE STRESSORS
+// Each stressor independently reduces effective green area.
+// Combined factor = product of all three retention factors.
+//
+// 1. Heat (days >30°C): canopy wilts, soil dries out
+//    baseline=20 days, each extra day above baseline = -0.9%
+//    floor: 55%
+//
+// 2. Hot nights (nights >20°C): trees can't cool/respire overnight
+//    baseline=6 nights, each extra night above baseline = -0.6%
+//    floor: 70%
+//
+// 3. Extreme rain (events >20mm): root erosion, waterlogging
+//    baseline=10 events, each extra event above baseline = -0.5%
+//    floor: 75%
+//
+// Combined floor: ~30% (all stressors maxed)
 // ============================================================
-function canopyRetentionFactor(hotDays) {
+function heatRetention(hotDays) {
   const excess = Math.max(0, hotDays - 20);
   return Math.max(0.55, 1 - excess * 0.009);
 }
 
-function effectiveVerde(w, hotDays) {
-  return w.verde * canopyRetentionFactor(hotDays);
+function nightRetention(nights) {
+  const excess = Math.max(0, nights - 6);
+  return Math.max(0.70, 1 - excess * 0.006);
+}
+
+function rainRetention(rain) {
+  const excess = Math.max(0, rain - 10);
+  return Math.max(0.75, 1 - excess * 0.005);
+}
+
+// Combined retention factor from all three stressors
+function combinedRetention(hotDays, nights, rain) {
+  return heatRetention(hotDays) * nightRetention(nights) * rainRetention(rain);
+}
+
+// Effective verde for a ward given all three climate vars
+function effectiveVerde(w, hotDays, nights, rain) {
+  return w.verde * combinedRetention(hotDays, nights, rain);
+}
+
+// Losses broken down by stressor (for display)
+function stressorLosses(baseVerde, hotDays, nights, rain) {
+  const hR  = heatRetention(hotDays);
+  const nR  = nightRetention(nights);
+  const rR  = rainRetention(rain);
+  const eff = baseVerde * hR * nR * rR;
+  return {
+    heatLoss:  parseFloat((baseVerde - baseVerde * hR).toFixed(1)),
+    nightLoss: parseFloat((baseVerde * hR - baseVerde * hR * nR).toFixed(1)),
+    rainLoss:  parseFloat((baseVerde * hR * nR - eff).toFixed(1)),
+    effective: parseFloat(eff.toFixed(1)),
+    total:     parseFloat((baseVerde - eff).toFixed(1)),
+  };
 }
 
 function getCl(year) { return userClimate[year] || {...BASELINE[year]}; }
@@ -441,70 +433,78 @@ function pressure(cl) {
   return (cl.hotDays/12)*0.5 + ((cl.nights+1)/4)*0.3 + (cl.rain/8)*0.2;
 }
 
-function baseDeficit(w, hotDays) {
-  const verde = effectiveVerde(w, hotDays !== undefined ? hotDays : 20);
+function baseDeficit(w, hotDays, nights, rain) {
+  const verde = effectiveVerde(w, hotDays, nights, rain);
   const pop = w.densidad * 10;
   return Math.max(0, pop/1000*4 - verde);
 }
 
-function netDeficit(w, press, hotDays) {
-  // planted[w.id] already includes current-year action credits via rebuildPlanted
+function netDeficit(w, pr, hotDays, nights, rain) {
   const creditHa = planted[w.id] / 400;
-  return Math.max(0, baseDeficit(w, hotDays) * press - creditHa);
+  return Math.max(0, baseDeficit(w, hotDays, nights, rain) * pr - creditHa);
 }
 
-function urgency(w, press, hotDays) {
-  const nd = netDeficit(w, press, hotDays);
+function urgency(w, pr, hotDays, nights, rain) {
+  const nd = netDeficit(w, pr, hotDays, nights, rain);
   const uDef = Math.min(nd / 160, 1);
   const uGhg = Math.min(w.ghg / 400, 1);
   const uDen = Math.min(w.densidad / 6300, 1);
   const climaticUrg = uDef*0.45 + uGhg*0.2 + uDen*0.15 + (1-Math.min(w.ingreso/200000,1))*0.2;
-  const blended = w.indice * 0.5 + climaticUrg * press * 0.5;
+  const blended = w.indice * 0.5 + climaticUrg * pr * 0.5;
   return Math.min(blended, 1);
 }
 
-function treesForWard(w, press, hotDays) {
-  return Math.max(0, Math.round(netDeficit(w, press, hotDays) * 400));
+function treesForWard(w, pr, hotDays, nights, rain) {
+  return Math.max(0, Math.round(netDeficit(w, pr, hotDays, nights, rain) * 400));
 }
 
-// Rebuild planted:
-//   1. Accumulate from all PRIOR periods (with their completion rates)
-//   2. Snapshot baseline critical wards (zero current-year credits)
-//   3. Add current-year action credits immediately
+// Action credit helpers
+function treesFromCurrentActions(year) {
+  const done = actionDone[year] || {};
+  const impact = actionImpact[year] || {};
+  return Object.keys(done).filter(k=>done[k]).reduce((s,k)=>s+(impact[k]||0),0);
+}
+
+function completionRate(year) {
+  const done = actionDone[year] || {};
+  const keys = Object.keys(done);
+  if (!keys.length) return 0;
+  return keys.filter(k=>done[k]).length / keys.length;
+}
+
 function rebuildPlanted(targetYear) {
   WARD_DATA.forEach(w => planted[w.id] = 0);
 
-  // Step 1 — prior periods
+  // Today has no prior periods
+  if (targetYear === 'today') return;
+
   for (const yr of YEARS) {
     if (yr >= targetYear) break;
     const cl = getCl(yr);
     const pr = pressure(cl);
     const rate = completionRate(yr);
     WARD_DATA.forEach(w => {
-      const needed = treesForWard(w, pr, cl.hotDays);
+      const needed = treesForWard(w, pr, cl.hotDays, cl.nights, cl.rain);
       planted[w.id] += Math.round(needed * rate);
     });
   }
 
-  // Step 2 — snapshot baseline BEFORE adding current-year credits
-  // Only computed ONCE per year — never overwritten by subsequent toggles
   if (!baselineCritical[targetYear]) {
     const clBase = getCl(targetYear);
     const prBase = pressure(clBase);
     baselineCritical[targetYear] = new Set(
-      WARD_DATA.filter(w => urgency(w, prBase, clBase.hotDays) > 0.6).map(w => w.id)
+      WARD_DATA.filter(w => urgency(w, prBase, clBase.hotDays, clBase.nights, clBase.rain) > 0.6).map(w => w.id)
     );
   }
 
-  // Step 3 — current year: distribute completed-action trees proportional to need
   const clBase = getCl(targetYear);
   const prBase = pressure(clBase);
   const currentTrees = treesFromCurrentActions(targetYear);
   if (currentTrees > 0) {
-    const totalNeed = WARD_DATA.reduce((a,w) => a + treesForWard(w, prBase, clBase.hotDays), 0);
+    const totalNeed = WARD_DATA.reduce((a,w)=>a+treesForWard(w,prBase,clBase.hotDays,clBase.nights,clBase.rain),0);
     if (totalNeed > 0) {
       WARD_DATA.forEach(w => {
-        const share = treesForWard(w, prBase, clBase.hotDays) / totalNeed;
+        const share = treesForWard(w, prBase, clBase.hotDays, clBase.nights, clBase.rain) / totalNeed;
         planted[w.id] += Math.round(currentTrees * share);
       });
     }
@@ -517,6 +517,7 @@ function totalPlanted() { return Object.values(planted).reduce((a,b)=>a+b,0); }
 // SCENARIO DETECTION
 // ============================================================
 function detectScenario(cl) {
+  if (currentYear === 'today') return { label:'Today — 2020 Baseline', color:'#455A64', desc:'Current observed conditions. No climate projection applied.' };
   const h = cl.hotDays;
   if      (h >= 40) return { label:'Scenario 2080',   color:'#D32F2F', desc:'Sustained extreme heat. Climate emergency. Structural canopy transformation with high thermal resilience species.' };
   else if (h >= 25) return { label:'Scenario 2050',   color:'#F9A825', desc:'Intense thermal stress. Accelerated replacement of vulnerable species and planting in critical corridors.' };
@@ -525,7 +526,7 @@ function detectScenario(cl) {
 }
 
 // ============================================================
-// SLIDER SYNC
+// SLIDERS
 // ============================================================
 function updateSliderFills() {
   [['sl-hotdays','var(--c-red)'],['sl-nights','var(--c-amber)'],['sl-rain','var(--c-blue)']].forEach(([id,color]) => {
@@ -561,7 +562,7 @@ function onSlider() {
   document.getElementById('val-rain').textContent    = cl.rain;
   updateSliderFills();
   userClimate[currentYear] = cl;
-  baselineCritical[currentYear] = null; // conditions changed → fresh baseline
+  baselineCritical[currentYear] = null;
   refresh(false);
 }
 
@@ -569,9 +570,11 @@ function onSlider() {
 // RENDER — YEAR SELECTOR
 // ============================================================
 function renderYearSelector() {
-  document.querySelectorAll('.yr-btn').forEach(btn => btn.classList.remove('active'));
   document.querySelectorAll('.yr-btn').forEach(btn => {
-    if (btn.textContent.trim() === String(currentYear)) btn.classList.add('active');
+    const val = btn.textContent.trim();
+    const isActive = (val === 'Today' && currentYear === 'today') ||
+                     (val !== 'Today' && String(currentYear) === val);
+    btn.classList.toggle('active', isActive);
   });
 }
 
@@ -580,24 +583,27 @@ function renderYearSelector() {
 // ============================================================
 function renderClimateStrip(cl, pr) {
   const sc = detectScenario(cl);
-  const b = BASELINE[2030];
-  const retention = canopyRetentionFactor(cl.hotDays);
-  const canopyLoss = Math.round((1 - retention) * 100);
+  const b  = BASELINE['today'];
+  const ret = combinedRetention(cl.hotDays, cl.nights, cl.rain);
+  const canopyLoss = Math.round((1 - ret) * 100);
+  const isToday = currentYear === 'today';
   const items = [
-    { label:'Days >30°C',        val:cl.hotDays, sub:'days/year',
-      delta:`${cl.hotDays-b.hotDays>=0?'+':''}${cl.hotDays-b.hotDays} vs 2030`,
-      cls:cl.hotDays-b.hotDays>25?'delta-crit':cl.hotDays-b.hotDays>10?'delta-warn':'delta-ok', accent:sc.color },
-    { label:'Nights >20°C',      val:cl.nights,  sub:'nights/year',
-      delta:`${cl.nights-b.nights>=0?'+':''}${cl.nights-b.nights} vs 2030`,
-      cls:cl.nights-b.nights>18?'delta-crit':cl.nights-b.nights>6?'delta-warn':'delta-ok', accent:sc.color },
-    { label:'Extreme Rain',      val:cl.rain,    sub:'events >20mm',
-      delta:`${cl.rain-b.rain>=0?'+':''}${cl.rain-b.rain} vs 2030`,
-      cls:cl.rain-b.rain>20?'delta-crit':cl.rain-b.rain>10?'delta-warn':'delta-ok', accent:sc.color },
-    { label:'Canopy Loss',       val:canopyLoss+'%', sub:'from thermal stress',
-      delta: canopyLoss > 0 ? `Retention: ${(retention*100).toFixed(0)}% of original green` : 'No thermal loss',
-      cls: canopyLoss > 25 ? 'delta-crit' : canopyLoss > 10 ? 'delta-warn' : 'delta-ok', accent:sc.color },
+    { label:'Days >30°C',   val:cl.hotDays, sub:'days/year',
+      delta: isToday ? 'Current observed' : `${cl.hotDays-b.hotDays>=0?'+':''}${cl.hotDays-b.hotDays} vs Today`,
+      cls: isToday ? 'delta-ok' : cl.hotDays-b.hotDays>25?'delta-crit':cl.hotDays-b.hotDays>10?'delta-warn':'delta-ok', accent:sc.color },
+    { label:'Nights >20°C', val:cl.nights, sub:'nights/year',
+      delta: isToday ? 'Current observed' : `${cl.nights-b.nights>=0?'+':''}${cl.nights-b.nights} vs Today`,
+      cls: isToday ? 'delta-ok' : cl.nights-b.nights>18?'delta-crit':cl.nights-b.nights>6?'delta-warn':'delta-ok', accent:sc.color },
+    { label:'Extreme Rain',  val:cl.rain, sub:'events >20mm',
+      delta: isToday ? 'Current observed' : `${cl.rain-b.rain>=0?'+':''}${cl.rain-b.rain} vs Today`,
+      cls: isToday ? 'delta-ok' : cl.rain-b.rain>20?'delta-crit':cl.rain-b.rain>10?'delta-warn':'delta-ok', accent:sc.color },
+    { label:'Canopy Loss (combined)', val:canopyLoss+'%', sub:'heat + nights + rain',
+      delta: isToday
+        ? `Retention: ${(ret*100).toFixed(0)}% — baseline conditions`
+        : `Retention: ${(ret*100).toFixed(0)}% — ΔHeat:${Math.round((1-heatRetention(cl.hotDays))*100)}% ΔNight:${Math.round((1-nightRetention(cl.nights))*100)}% ΔRain:${Math.round((1-rainRetention(cl.rain))*100)}%`,
+      cls: canopyLoss > 30 ? 'delta-crit' : canopyLoss > 12 ? 'delta-warn' : 'delta-ok', accent:sc.color },
   ];
-  document.getElementById('climate-strip').innerHTML = items.map(i => `
+  document.getElementById('climate-strip').innerHTML = items.map(i=>`
     <div class="clim-card" style="--accent:${i.accent}">
       <div class="clim-label">${i.label}</div>
       <div class="clim-val">${i.val}</div>
@@ -628,86 +634,98 @@ function renderScenBar(cl, pr) {
 }
 
 // ============================================================
-// RENDER — EQUITY PANEL (Sheet 2)
-// Effective Green adj = base green × thermal retention (heat loss only)
-// GHG adj        = base ghg × inverse thermal retention (more heat → more energy → more GHG)
+// RENDER — EQUITY PANEL
+// Now shows loss breakdown: heat, nights, rain separately
 // ============================================================
-function renderEquityPanel(pr, hotDays) {
-  const retention = canopyRetentionFactor(hotDays);
-  // Green: only drops due to thermal degradation, not multiplied by pressure
-  const maxVerde = Math.max(...EQUITY_DATA.map(e => e.verde));
-  // GHG: rises with more heat (more AC, more electricity)
-  const ghgFactor = 1 + (1 - retention) * 1.5;
-  const maxGhg    = Math.max(...EQUITY_DATA.map(e => e.ghg * ghgFactor));
-  const clsMap    = {'Low':'eq-bajo','Medium':'eq-medio','Medium-High':'eq-medioalto','High':'eq-alto'};
+function renderEquityPanel(cl) {
+  const { hotDays, nights, rain } = cl;
+
+  const hR = heatRetention(hotDays);
+  const nR = nightRetention(nights);
+  const rR = rainRetention(rain);
+  const combined = hR * nR * rR;
+
+  // Fixed baselines (no stress) — bars scale against these fixed ceilings
+  const maxVerdeFixed   = Math.max(...EQUITY_DATA.map(e => e.verde));
+  const maxCanopyFixed  = Math.max(...EQUITY_DATA.map(e => e.canopyBlock)); // fixed ceiling for canopy bar
+  const clsMap   = {'Low':'eq-bajo','Medium':'eq-medio','Medium-High':'eq-medioalto','High':'eq-alto'};
+
+  // Legend — only show chips for active stressors (above baseline)
+  const legendEl = document.getElementById('stress-legend');
+  const chips = [];
+  const heatLossPct  = Math.round((1 - hR) * 100);
+  const nightLossPct = Math.round((1 - nR) * 100);
+  const rainLossPct  = Math.round((1 - rR) * 100);
+  if (heatLossPct  > 0) chips.push(`<span class="stress-chip sc-hot">🌡 Heat: −${heatLossPct}% canopy</span>`);
+  if (nightLossPct > 0) chips.push(`<span class="stress-chip sc-night">🌙 Hot nights: −${nightLossPct}% canopy</span>`);
+  if (rainLossPct  > 0) chips.push(`<span class="stress-chip sc-rain">🌧 Rain stress: −${rainLossPct}% canopy</span>`);
+  if (!chips.length)    chips.push(`<span class="stress-chip" style="background:rgba(46,125,50,0.08);color:#1B5E20">✓ No active stress</span>`);
+  legendEl.innerHTML = chips.join('');
 
   document.getElementById('equity-grid').innerHTML = EQUITY_DATA.map(e => {
-    // Verde efectivo = base menos lo perdido por calor
-    const verdeEff  = e.verde * retention;
-    const verdeLoss = e.verde - verdeEff;
-    const ghgAdj    = e.ghg * ghgFactor;
-    // Bars: relative to max within the panel, so differences are visible
-    const verdeBar  = maxVerde > 0 ? (verdeEff / maxVerde * 100).toFixed(0) : 0;
-    const ghgBar    = maxGhg   > 0 ? (ghgAdj   / maxGhg   * 100).toFixed(0) : 0;
+    const losses = stressorLosses(e.verde, hotDays, nights, rain);
+    // canopyBlock degrades with the same combined retention as green area
+    const canopyEff  = parseFloat((e.canopyBlock * combined).toFixed(1));
+    const canopyLoss = parseFloat((e.canopyBlock - canopyEff).toFixed(1));
+    const verdeBar  = maxVerdeFixed    > 0 ? Math.min((losses.effective / maxVerdeFixed * 100), 100).toFixed(0) : 0;
+    const canopyBar = maxCanopyFixed   > 0 ? Math.min((canopyEff / maxCanopyFixed * 100), 100).toFixed(0) : 0;
     const cls = clsMap[e.nivel] || 'eq-bajo';
-    const lossNote = verdeLoss > 0.5
-      ? `<div style="font-size:0.58rem;color:var(--c-red);font-family:'DM Mono',monospace;margin-top:2px">▼ ${verdeLoss.toFixed(1)} Ha lost to thermal stress</div>`
-      : `<div style="font-size:0.58rem;color:var(--c-green);font-family:'DM Mono',monospace;margin-top:2px">No thermal loss</div>`;
+
+    // Build per-stressor loss note
+    const lossLines = [];
+    if (losses.heatLoss  > 0.1) lossLines.push(`<span style="color:var(--c-red)">🌡 −${losses.heatLoss.toFixed(1)} Ha heat</span>`);
+    if (losses.nightLoss > 0.1) lossLines.push(`<span style="color:var(--c-amber)">🌙 −${losses.nightLoss.toFixed(1)} Ha nights</span>`);
+    if (losses.rainLoss  > 0.1) lossLines.push(`<span style="color:var(--c-blue)">🌧 −${losses.rainLoss.toFixed(1)} Ha rain</span>`);
+
+    const lossNote = lossLines.length
+      ? `<div style="font-size:0.56rem;font-family:'DM Mono',monospace;margin-top:3px;line-height:1.6">${lossLines.join(' · ')}</div>`
+      : `<div style="font-size:0.56rem;color:var(--c-green);font-family:'DM Mono',monospace;margin-top:3px">No stress loss</div>`;
+
     return `<div class="eq-card ${cls}">
-      <div class="eq-nivel">${e.nivel} <span style="color:var(--muted);font-weight:400">(${e.n} wards)</span></div>
-      <div class="eq-ingreso">$${(e.ingreso/1000).toFixed(0)}K</div>
+      <div class="eq-nivel">${e.nivel} <span style="color:var(--muted);font-weight:400"></span></div>
       <div class="eq-row">
         <span class="label">Effective Green Area</span>
-        <span class="val" style="color:var(--c-green)">${verdeEff.toFixed(1)} Ha</span>
+        <span class="val" style="color:var(--c-green)">${losses.effective.toFixed(1)} Ha</span>
       </div>
       <div class="eq-bar" style="background:rgba(46,125,50,0.15);width:${verdeBar}%">
         <div style="height:4px;background:var(--c-green);border-radius:2px;width:100%"></div>
       </div>
       ${lossNote}
       <div class="eq-row" style="margin-top:6px">
-        <span class="label">Projected GHG/capita</span>
-        <span class="val" style="color:var(--c-red)">${ghgAdj.toFixed(1)} kg</span>
+        <span class="label">Canopy area / block</span>
+        <span class="val" style="color:var(--c-amber)">${canopyEff.toFixed(0)} m²</span>
       </div>
-      <div class="eq-bar" style="background:rgba(211,47,47,0.12);width:${ghgBar}%">
-        <div style="height:4px;background:var(--c-red);border-radius:2px;width:100%"></div>
+      <div class="eq-bar" style="background:rgba(249,168,37,0.15);width:${canopyBar}%">
+        <div style="height:4px;background:var(--c-amber);border-radius:2px;width:100%"></div>
       </div>
+      ${canopyLoss > 0.5 ? `<div style="font-size:0.56rem;color:var(--c-amber);font-family:'DM Mono',monospace;margin-top:2px">▼ −${canopyLoss.toFixed(0)} m² from climate stress</div>` : ''}
     </div>`;
   }).join('');
 }
 
 // ============================================================
-// RENDER — CRITICAL WARDS (sidebar vertical list)
-// Rule: a ward can leave critical status (if actions reduce urgency)
-//       but can NEVER enter critical status after actions are marked
+// RENDER — CRITICAL WARDS (sidebar)
 // ============================================================
-function renderPriorityList(pr, hotDays) {
-  const seColors    = {'Low':'se-bajo','Medium':'se-medio','Medium-High':'se-medioalto','High':'se-alto'};
-  const nivelColors = {'1 - Critical':'nivel-critica','2 - High':'nivel-alta','3 - Medium':'nivel-media','4 - Low':'nivel-baja','5 - Very Low':'nivel-baja'};
-  const hd = hotDays || 20;
+function renderPriorityList(pr, cl) {
+  const { hotDays, nights, rain } = cl;
+  const seColors = {'Low':'se-bajo','Medium':'se-medio','Medium-High':'se-medioalto','High':'se-alto'};
 
   const scored = WARD_DATA.map(w => ({
     ...w,
-    score: urgency(w, pr, hd),
-    treesNeeded: treesForWard(w, pr, hd),
-    deficit: netDeficit(w, pr, hd),
+    score: urgency(w, pr, hotDays, nights, rain),
+    treesNeeded: treesForWard(w, pr, hotDays, nights, rain),
+    deficit: netDeficit(w, pr, hotDays, nights, rain),
   })).sort((a,b) => b.score - a.score);
 
-  // Baseline is set by rebuildPlanted — use it directly
-  const baseline = baselineCritical[currentYear] || new Set(WARD_DATA.map(w => w.id));
-
-  // Critical = was critical at baseline AND still above threshold now
-  // (can drop below threshold from actions, but cannot gain new ones)
+  const baseline = baselineCritical[currentYear] || new Set(WARD_DATA.map(w=>w.id));
   const critical    = scored.filter(w => baseline.has(w.id) && w.score > 0.6);
-  // Show reduced-from-critical wards in a special "improved" strip
   const improved    = scored.filter(w => baseline.has(w.id) && w.score <= 0.6);
   const nonCritical = scored.filter(w => !baseline.has(w.id));
 
   document.getElementById('critical-count').textContent =
     critical.length > 0
-      ? `${critical.length} critical${critical.length > 1 ? '' : ''}${improved.length > 0 ? ' · ' + improved.length + ' improved' : ''}`
-      : improved.length > 0
-        ? `✓ All improved (${improved.length})`
-        : 'None';
+      ? `${critical.length} critical${improved.length > 0 ? ' · ' + improved.length + ' improved' : ''}`
+      : improved.length > 0 ? `✓ All improved (${improved.length})` : 'None';
 
   const list = document.getElementById('priority-list');
   list.style.display = 'flex';
@@ -719,16 +737,10 @@ function renderPriorityList(pr, hotDays) {
   if (critical.length > 0) {
     html += critical.map(w => {
       const color = w.score > 0.8 ? '#D32F2F' : w.score > 0.7 ? '#E65100' : '#F9A825';
-      const seC   = seColors[w.nivelSE]  || 'se-medio';
-      const nivC  = nivelColors[w.nivel] || 'nivel-media';
+      const seC   = seColors[w.nivelSE] || 'se-medio';
       const pct   = (w.score * 100).toFixed(0);
-      const treesK = w.treesNeeded > 999 ? (w.treesNeeded/1000).toFixed(1)+'K' : w.treesNeeded.toLocaleString();
-      return `<div onclick="openDrawer('${w.id}')" style="
-          background:#fff;border:1px solid var(--border);border-radius:3px;
-          padding:9px 10px;cursor:pointer;border-left:3px solid ${color};
-          transition:background 0.15s"
-        onmouseover="this.style.background='var(--panel2)'"
-        onmouseout="this.style.background='#fff'">
+      return `<div onclick="openDrawer('${w.id}')" style="background:#fff;border:1px solid var(--border);border-radius:3px;padding:9px 10px;cursor:pointer;border-left:3px solid ${color};transition:background 0.15s"
+        onmouseover="this.style.background='var(--panel2)'" onmouseout="this.style.background='#fff'">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
           <div>
             <div style="font-size:0.75rem;font-weight:600;color:var(--white)">${w.ward}</div>
@@ -739,28 +751,20 @@ function renderPriorityList(pr, hotDays) {
         <div style="height:3px;background:#e8e8e8;border-radius:2px;overflow:hidden;margin-bottom:6px">
           <div style="width:${pct}%;height:100%;background:${color};border-radius:2px;transition:width 0.4s"></div>
         </div>
-        <div style="display:flex;gap:5px;margin-bottom:5px">
+        <div style="display:flex;gap:5px">
           <span class="crit-se ${seC}">${w.nivelSE}</span>
-          <span class="crit-nivel ${nivC}">${w.nivel}</span>
-        </div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.59rem;color:var(--muted)">
-          ${treesK} trees · <span style="color:var(--c-green)">${w.deficit.toFixed(0)} Ha deficit</span>
+          <span class="crit-nivel">${w.nivel}</span>
         </div>
       </div>`;
     }).join('');
   }
 
-  // Improved wards (were critical, now reduced by actions)
   if (improved.length > 0) {
     html += improved.map(w => {
       const pct = (w.score * 100).toFixed(0);
       const seC = seColors[w.nivelSE] || 'se-medio';
-      return `<div onclick="openDrawer('${w.id}')" style="
-          background:#fff;border:1px solid rgba(46,125,50,0.25);border-radius:3px;
-          padding:8px 10px;cursor:pointer;border-left:3px solid var(--c-green);
-          transition:background 0.15s;opacity:0.8"
-        onmouseover="this.style.background='var(--panel2)'"
-        onmouseout="this.style.background='#fff'">
+      return `<div onclick="openDrawer('${w.id}')" style="background:#fff;border:1px solid rgba(46,125,50,0.25);border-radius:3px;padding:8px 10px;cursor:pointer;border-left:3px solid var(--c-green);transition:background 0.15s;opacity:0.8"
+        onmouseover="this.style.background='var(--panel2)'" onmouseout="this.style.background='#fff'">
         <div style="display:flex;align-items:center;justify-content:space-between">
           <div>
             <div style="font-size:0.72rem;font-weight:600;color:var(--white)">${w.ward} <span style="font-size:0.58rem;color:var(--c-green);font-family:'DM Mono',monospace">✓ improved</span></div>
@@ -775,15 +779,12 @@ function renderPriorityList(pr, hotDays) {
     }).join('');
   }
 
-  if (critical.length === 0 && improved.length === 0) {
-    html = `<div style="padding:12px 0;font-size:0.72rem;color:var(--muted);text-align:center">
-      ✓ No critical wards in this scenario
-    </div>`;
+  if (!critical.length && !improved.length) {
+    html = `<div style="padding:12px 0;font-size:0.72rem;color:var(--muted);text-align:center">✓ No critical wards in this scenario</div>`;
   }
 
   list.innerHTML = html;
 
-  // Non-critical strip (wards that were never critical)
   const ncEl = document.getElementById('non-critical-summary');
   if (nonCritical.length > 0) {
     ncEl.style.display = 'flex';
@@ -799,36 +800,38 @@ function renderPriorityList(pr, hotDays) {
 // RENDER — ACTIONS
 // ============================================================
 function renderActions(cl, pr) {
+  const { hotDays, nights, rain } = cl;
   const sc = detectScenario(cl);
-  const hd = cl.hotDays, nt = cl.nights, rn = cl.rain;
   const tp = totalPlanted();
   const creditHa = (tp/400).toFixed(1);
-  const totNeeded = WARD_DATA.reduce((a,w)=>a+treesForWard(w,pr,hd),0);
-  const totDefNet = WARD_DATA.reduce((a,w)=>a+netDeficit(w,pr,hd),0);
-  const avgUrg    = WARD_DATA.reduce((a,w)=>a+urgency(w,pr,hd),0) / WARD_DATA.length;
-  const critWards = WARD_DATA.filter(w=>urgency(w,pr,hd)>0.6);
-  const top3 = [...WARD_DATA].sort((a,b)=>urgency(b,pr,hd)-urgency(a,pr,hd)).slice(0,3).map(w=>w.ward).join(', ');
+  const totNeeded = WARD_DATA.reduce((a,w)=>a+treesForWard(w,pr,hotDays,nights,rain),0);
+  const totDefNet = WARD_DATA.reduce((a,w)=>a+netDeficit(w,pr,hotDays,nights,rain),0);
+  const avgUrg    = WARD_DATA.reduce((a,w)=>a+urgency(w,pr,hotDays,nights,rain),0) / WARD_DATA.length;
+  const critWards = WARD_DATA.filter(w=>urgency(w,pr,hotDays,nights,rain)>0.6);
+  const top3 = [...WARD_DATA].sort((a,b)=>urgency(b,pr,hotDays,nights,rain)-urgency(a,pr,hotDays,nights,rain)).slice(0,3).map(w=>w.ward).join(', ');
+  const combined = combinedRetention(hotDays, nights, rain);
+  const totalLoss = Math.round((1 - combined) * 100);
 
-  // ── Compliance summary bar (from PREVIOUS year's actions) ──
-  const prevYear = YEARS[YEARS.indexOf(currentYear) - 1];
+  // Compliance bar — only for future scenarios, not Today
+  const prevYear = currentYear === 'today' ? undefined : YEARS[YEARS.indexOf(currentYear) - 1];
   if (prevYear !== undefined) {
     const prevDone = actionDone[prevYear] || {};
     const prevKeys = Object.keys(prevDone);
-    const prevChecked = prevKeys.filter(k => prevDone[k]).length;
+    const prevChecked = prevKeys.filter(k=>prevDone[k]).length;
     const pct = prevKeys.length > 0 ? Math.round(prevChecked / prevKeys.length * 100) : 0;
     const missingTrees = prevKeys.length > 0
       ? Math.round(WARD_DATA.reduce((a,w)=>{
-          const pcl=getCl(prevYear), ppr=pressure(pcl);
-          return a + treesForWard(w,ppr,pcl.hotDays);
-        },0) * (1 - prevChecked/Math.max(prevKeys.length,1)))
+          const pcl=getCl(prevYear),ppr=pressure(pcl);
+          return a+treesForWard(w,ppr,pcl.hotDays,pcl.nights,pcl.rain);
+        },0)*(1-prevChecked/Math.max(prevKeys.length,1)))
       : 0;
     const bar = document.getElementById('compliance-bar');
     bar.style.display = 'flex';
-    document.getElementById('cb-done').textContent = prevChecked;
+    document.getElementById('cb-done').textContent  = prevChecked;
     document.getElementById('cb-total').textContent = prevKeys.length;
-    document.getElementById('cb-progress-fill').style.width = pct + '%';
+    document.getElementById('cb-progress-fill').style.width = pct+'%';
     const impactEl = document.getElementById('cb-impact-text');
-    if (prevKeys.length === 0) {
+    if (!prevKeys.length) {
       impactEl.textContent = 'No actions recorded in previous period';
       impactEl.style.color = 'var(--muted)';
     } else if (pct < 100) {
@@ -851,83 +854,87 @@ function renderActions(cl, pr) {
   }
 
   document.getElementById('actions-title').textContent =
-    `Action Plan — ${currentYear}  ·  ${hd} hot days · ${nt} nights · ${rn} rain events`;
+    `Action Plan — ${currentYear === 'today' ? 'Today (2020 baseline)' : currentYear}  ·  ${hotDays} hot days · ${nights} nights · ${rain} rain events`;
 
   const actions = [];
 
-  if (hd >= 40 || avgUrg > 0.70) {
+  if (hotDays >= 40 || avgUrg > 0.70) {
     actions.push({ key:'plantacion_emergencia', type:'urgent',
-      title: hd >= 50 ? 'Climate Emergency: Urban Survival Canopy' : 'Emergency Planting — Critical Deficit',
-      desc:`With ${hd} days >30°C and thermal loss of ${Math.round((1-canopyRetentionFactor(hd))*100)}% of canopy, ${critWards.length} wards exceed the critical threshold (${top3}). ${totNeeded.toLocaleString()} additional trees are needed. Current net deficit: ${totDefNet.toFixed(0)} Ha.`,
+      title: hotDays >= 50 ? 'Climate Emergency: Urban Survival Canopy' : 'Emergency Planting — Critical Deficit',
+      desc:`With ${hotDays} days >30°C, ${nights} hot nights, ${rain} rain events and combined canopy loss of ${totalLoss}%, ${critWards.length} wards exceed the critical threshold (${top3}). ${totNeeded.toLocaleString()} additional trees are needed. Net deficit: ${totDefNet.toFixed(0)} Ha.`,
       impact: totNeeded,
       metrics:[{k:'Trees to plant',v:totNeeded.toLocaleString()},{k:'Ha net deficit',v:totDefNet.toFixed(0)},{k:'Critical wards',v:critWards.length},{k:'Cumul. credit',v:creditHa+' Ha'}]
     });
-  } else if (hd >= 25 || avgUrg > 0.45) {
+  } else if (hotDays >= 25 || avgUrg > 0.45) {
     actions.push({ key:'plantacion_prioritaria', type:'high',
       title: 'Priority Planting — Most Vulnerable Wards',
-      desc:`With ${hd} heat days and thermal loss of ${Math.round((1-canopyRetentionFactor(hd))*100)}%, wards ${top3} lead prioritization. ${totNeeded.toLocaleString()} trees are needed. Low SE wards have lower natural recovery capacity.`,
+      desc:`With ${hotDays} heat days, ${nights} hot nights and combined canopy stress of ${totalLoss}%, wards ${top3} lead prioritization. Low SE wards have lower natural recovery capacity.`,
       impact: totNeeded,
       metrics:[{k:'Trees to plant',v:totNeeded.toLocaleString()},{k:'Ha net deficit',v:totDefNet.toFixed(0)},{k:'Cumul. credit',v:creditHa+' Ha'}]
     });
   } else {
     actions.push({ key:'mantenimiento', type:'medium',
       title: 'Selective Canopy Maintenance and Expansion',
-      desc:`Moderate conditions (${hd} heat days, canopy retention: ${Math.round(canopyRetentionFactor(hd)*100)}%). The ${tp.toLocaleString()} planted trees reduce urgency. Continue selective planting in ${top3}.`,
+      desc:`Moderate conditions (combined canopy retention: ${Math.round(combined*100)}%). The ${tp.toLocaleString()} planted trees reduce urgency. Continue selective planting in ${top3}.`,
       impact: Math.round(totNeeded * 0.5),
       metrics:[{k:'Trees to plant',v:totNeeded.toLocaleString()},{k:'Ha net deficit',v:totDefNet.toFixed(0)},{k:'Cumul. planted',v:tp.toLocaleString()}]
     });
   }
 
-  if (hd >= 25) {
-    actions.push({ key:'sustitucion_especies', type: hd >= 35 ? 'urgent' : 'high',
+  if (hotDays >= 25) {
+    actions.push({ key:'sustitucion_especies', type: hotDays >= 35 ? 'urgent' : 'high',
       title: 'High-Climate-Risk Species Replacement',
-      desc:`${hd} heat days and thermal loss of ${Math.round((1-canopyRetentionFactor(hd))*100)}% trigger replacement of Tilia spp., Salix spp. and Betula pendula. Introduce Ostrya virginiana, Quercus velutina, Fraxinus pennsylvanica.`,
+      desc:`Combined stress (${totalLoss}% canopy loss) triggers replacement of Tilia spp., Salix spp. and Betula pendula. Introduce Ostrya virginiana, Quercus velutina, Fraxinus pennsylvanica.`,
       impact: Math.round(totNeeded * 0.3),
-      metrics:[{k:'Vulnerable spp.',v:'Tilia, Salix, Betula'},{k:'% to replace',v:Math.min(Math.round((hd-20)*2.5),100)+'%'},{k:'Deadline',v:currentYear+5}]
+      metrics:[{k:'Vulnerable spp.',v:'Tilia, Salix, Betula'},{k:'% to replace',v:Math.min(Math.round((hotDays-20)*2.5),100)+'%'},{k:'Deadline',v:currentYear+5}]
     });
   }
 
-  if (rn >= 12) {
-    actions.push({ key:'lluvia_infraestructura', type: rn >= 25 ? 'high' : 'medium',
-      title: `Extreme Rain Management with Green Infrastructure (${rn} events/yr)`,
-      desc:`${rn} events >20mm/day require tree-lined bioswales. Broad-crown trees intercept 15–40% of rainfall. Ward 2 (GHG: 100.5 kg/capita) and Ward 3 (87.3 kg/capita) are the priority.`,
+  if (rain >= 12) {
+    actions.push({ key:'lluvia_infraestructura', type: rain >= 25 ? 'high' : 'medium',
+      title: `Extreme Rain Management with Green Infrastructure (${rain} events/yr)`,
+      desc:`${rain} events >20mm/day (−${Math.round((1-rainRetention(rain))*100)}% canopy via waterlogging) require tree-lined bioswales. Broad-crown trees intercept 15–40% of rainfall. Ward 2 and Ward 3 are priority.`,
       impact: Math.round(totNeeded * 0.2),
-      metrics:[{k:'Bioswales',v:Math.round(rn*2.2)},{k:'Rain intercept.',v:Math.min(Math.round(rn*1.5),40)+'%'},{k:'Capture m³/yr',v:(rn*11000).toLocaleString()}]
+      metrics:[{k:'Bioswales',v:Math.round(rain*2.2)},{k:'Rain intercept.',v:Math.min(Math.round(rain*1.5),40)+'%'},{k:'Capture m³/yr',v:(rain*11000).toLocaleString()}]
     });
   }
 
-  if (nt >= 8) {
-    actions.push({ key:'sombra_nocturna', type: nt >= 18 ? 'high' : 'medium',
-      title: `Nighttime Shade Corridors (${nt} nights >20°C)`,
-      desc:`With ${nt} hot nights, canopy in dense neighbourhoods is essential. Ward 2 (6,263 pop/km²) and Ward 3 (2,850 pop/km²) are most vulnerable. Est. reduction: ${Math.round(nt*0.08).toFixed(1)}°C at night.`,
+  if (nights >= 8) {
+    actions.push({ key:'sombra_nocturna', type: nights >= 18 ? 'high' : 'medium',
+      title: `Nighttime Shade Corridors (${nights} nights >20°C)`,
+      desc:`With ${nights} hot nights (−${Math.round((1-nightRetention(nights))*100)}% canopy via impaired respiration), shade cover in dense neighbourhoods is essential. Ward 2 and Ward 3 most vulnerable. Est. reduction: ${Math.round(nights*0.08).toFixed(1)}°C overnight.`,
       impact: Math.round(totNeeded * 0.15),
-      metrics:[{k:'Night T° reduction',v:'-'+Math.round(nt*0.08).toFixed(1)+'°C'},{k:'Focus wards',v:'W2,W3,W4,W7'},{k:'Target coverage',v:Math.min(30+nt*0.8,70).toFixed(0)+'%'}]
+      metrics:[{k:'Night T° reduction',v:'-'+Math.round(nights*0.08).toFixed(1)+'°C'},{k:'Focus wards',v:'W2,W3,W4,W7'},{k:'Target coverage',v:Math.min(30+nights*0.8,70).toFixed(0)+'%'}]
     });
   }
 
   actions.push({ key:'diversificacion', type:'medium',
     title: 'Genetic Diversification and Green Equity Investment',
-    desc:`No species >10% of inventory. Introduce ${Math.round(3+hd*0.12)} new heat-resilient species. The gap shows Low SE wards with ${((EQUITY_DATA[1].verde - EQUITY_DATA[0].verde)/EQUITY_DATA[1].verde*100).toFixed(0)}% less green than Medium level.`,
+    desc:`No species >10% of inventory. The equity gap shows Low SE wards with significantly less green area than higher SE levels, worsened by combined climate stressors.`,
     impact: Math.round(totNeeded * 0.1),
-    metrics:[{k:'New species',v:Math.round(3+hd*0.12)},{k:'Max monoculture',v:'10%'},{k:'Equity gap',v:(((EQUITY_DATA[1].verde-EQUITY_DATA[0].verde)/EQUITY_DATA[1].verde)*100).toFixed(0)+'%'}]
+    metrics:[{k:'New species',v:Math.round(3+hotDays*0.12)},{k:'Max monoculture',v:'10%'},{k:'Equity gap',v:(((EQUITY_DATA[1].verde-EQUITY_DATA[0].verde)/EQUITY_DATA[1].verde)*100).toFixed(0)+'%'}]
   });
 
   actions.push({ key:'monitoreo', type:'low',
     title: 'Monitoring, Inventory and Evaluation of Past Actions',
-    desc:`Evaluate the ${tp.toLocaleString()} planted trees. Sentinel-2 every 10 days. Update priority indices with observed climate data (${hd} heat days, canopy retention: ${Math.round(canopyRetentionFactor(hd)*100)}%).`,
+    desc:`Evaluate the ${tp.toLocaleString()} planted trees. Sentinel-2 every 10 days. Update priority indices with observed climate data (combined canopy retention: ${Math.round(combined*100)}%).`,
     impact: 0,
     metrics:[{k:'Trees to evaluate',v:tp.toLocaleString()},{k:'Frequency',v:'10 days'},{k:'Sensor',v:'Sentinel-2'},{k:'Wards',v:'15'}]
   });
 
-  // Register all action keys for this year and store their tree impact
   if (!actionDone[currentYear])   actionDone[currentYear]   = {};
   if (!actionImpact[currentYear]) actionImpact[currentYear] = {};
   actions.forEach(a => {
     if (!(a.key in actionDone[currentYear])) actionDone[currentYear][a.key] = false;
-    actionImpact[currentYear][a.key] = a.impact; // store so rebuildPlanted can use it
+    actionImpact[currentYear][a.key] = a.impact;
   });
 
-  const tm = { urgent:{cls:'priority-urgent',badge:'badge-urgent',label:'URGENT'}, high:{cls:'priority-high',badge:'badge-high',label:'HIGH'}, medium:{cls:'priority-medium',badge:'badge-medium',label:'MEDIUM'}, low:{cls:'priority-low',badge:'badge-low',label:'LOW'} };
+  const tm = {
+    urgent:{cls:'priority-urgent',badge:'badge-urgent',label:'URGENT'},
+    high:{cls:'priority-high',badge:'badge-high',label:'HIGH'},
+    medium:{cls:'priority-medium',badge:'badge-medium',label:'MEDIUM'},
+    low:{cls:'priority-low',badge:'badge-low',label:'LOW'}
+  };
 
   document.getElementById('action-list').innerHTML = actions.map((a,i) => {
     const t = tm[a.type];
@@ -936,16 +943,15 @@ function renderActions(cl, pr) {
       <div class="ac-header"><div class="ac-title">${a.title}</div><span class="ac-badge ${t.badge}">${t.label}</span></div>
       <div class="ac-desc">${a.desc}</div>
       <div class="action-footer">
-        <label class="action-check-wrap" onclick="toggleAction('${a.key}', event)">
+        <label class="action-check-wrap" onclick="toggleAction('${a.key}',event)">
           <div class="action-checkbox${done?' checked':''}" id="chk-${a.key}"></div>
-          <span class="action-check-label${done?' checked':''}">${done ? '✓ Action completed' : 'Mark as completed'}</span>
+          <span class="action-check-label${done?' checked':''}">${done?'✓ Action completed':'Mark as completed'}</span>
         </label>
       </div>
     </div>`;
   }).join('');
 
   const co2 = Math.round(tp * 22 / 1000);
-
   document.getElementById('h-trees').textContent   = (totNeeded/1000).toFixed(0)+'K';
   document.getElementById('h-credit').textContent  = (tp/1000).toFixed(0)+'K';
   document.getElementById('h-deficit').textContent = totDefNet.toFixed(0)+' Ha';
@@ -956,53 +962,48 @@ function renderActions(cl, pr) {
 
 // ============================================================
 // TOGGLE ACTION COMPLETION
-// Marking an action immediately updates planted for the current year
-// so all metrics (deficit, urgency, ranking, heatmap) update now
 // ============================================================
 function toggleAction(key, e) {
   e.preventDefault();
   if (!actionDone[currentYear])   actionDone[currentYear]   = {};
   if (!actionImpact[currentYear]) actionImpact[currentYear] = {};
   actionDone[currentYear][key] = !actionDone[currentYear][key];
-
-  // rebuildPlanted(currentYear) now applies both prior-period credits
-  // AND current-year completed actions — so everything updates immediately
   rebuildPlanted(currentYear);
-
   const cl = readSliders();
   const pr = pressure(cl);
-  renderActions(cl, pr);         // re-renders with updated checkboxes + numbers
-  renderEquityPanel(pr, cl.hotDays);
-  renderPriorityList(pr, cl.hotDays);
-  renderHeatmap();
-  renderCharts(cl, pr);
-  renderScenBar(cl, pr);         // update planted acum. in scenario bar
+  renderActions(cl, pr);
+  renderEquityPanel(cl);
+  renderPriorityList(pr, cl);
+  renderScenBar(cl, pr);
 }
-
-
 
 // ============================================================
 // WARD DETAIL DRAWER
 // ============================================================
 function openDrawer(wardId) {
-  const w = WARD_DATA.find(d => d.id === wardId);
+  const w = WARD_DATA.find(d=>d.id===wardId);
   if (!w) return;
   const cl = readSliders();
   const pr = pressure(cl);
-  const u  = urgency(w, pr, cl.hotDays);
-  const nd = netDeficit(w, pr, cl.hotDays);
+  const { hotDays, nights, rain } = cl;
+  const u  = urgency(w, pr, hotDays, nights, rain);
+  const nd = netDeficit(w, pr, hotDays, nights, rain);
   const tp = planted[w.id];
-  const verdeEff = effectiveVerde(w, cl.hotDays);
-  const canopyLoss = Math.round((1 - canopyRetentionFactor(cl.hotDays)) * w.verde * 10) / 10;
+  const losses = stressorLosses(w.verde, hotDays, nights, rain);
 
   const seClass  = {'Low':'se-bajo','Medium':'se-medio','Medium-High':'se-medioalto','High':'se-alto'};
   const idxColor = w.indice > 0.7 ? '#D32F2F' : w.indice > 0.45 ? '#F9A825' : w.indice > 0.25 ? '#2E7D32' : '#888';
+
+  // Per-stressor loss rows
+  const lossRows = [];
+  if (losses.heatLoss  > 0.1) lossRows.push(`<div style="font-size:0.62rem;color:var(--c-red);font-family:'DM Mono',monospace">🌡 Heat: −${losses.heatLoss.toFixed(1)} Ha</div>`);
+  if (losses.nightLoss > 0.1) lossRows.push(`<div style="font-size:0.62rem;color:var(--c-amber);font-family:'DM Mono',monospace">🌙 Hot nights: −${losses.nightLoss.toFixed(1)} Ha</div>`);
+  if (losses.rainLoss  > 0.1) lossRows.push(`<div style="font-size:0.62rem;color:var(--c-blue);font-family:'DM Mono',monospace">🌧 Rain stress: −${losses.rainLoss.toFixed(1)} Ha</div>`);
 
   document.getElementById('drawer-content').innerHTML = `
     <div class="drawer-ward">${w.ward}</div>
     <div class="drawer-nombre">${w.nombre}</div>
     <span class="drawer-se-badge ${seClass[w.nivelSE]||'se-medio'}">${w.nivelSE} · ${w.nivel}</span>
-
     <div class="drawer-idx">
       <span class="idx-val" style="color:${idxColor}">${(w.indice*100).toFixed(0)}</span>
       <div>
@@ -1010,16 +1011,15 @@ function openDrawer(wardId) {
         <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted)">Climate-adjusted: <strong style="color:${idxColor}">${(u*100).toFixed(0)}</strong></div>
       </div>
     </div>
-
     <div class="drawer-metrics">
       <div class="dm-card"><div class="dm-val">$${(w.ingreso/1000).toFixed(0)}K</div><div class="dm-lbl">Avg. Income</div></div>
       <div class="dm-card"><div class="dm-val">${w.densidad.toLocaleString()}</div><div class="dm-lbl">pop/km²</div></div>
       <div class="dm-card"><div class="dm-val">${w.verde.toFixed(1)} Ha</div><div class="dm-lbl">Base green area</div></div>
-      <div class="dm-card"><div class="dm-val" style="color:${canopyLoss>0?'var(--c-red)':'var(--c-green)'}">${verdeEff.toFixed(1)} Ha</div><div class="dm-lbl">Effective green${canopyLoss>0?' (▼ '+canopyLoss.toFixed(1)+' Ha heat)':''}</div></div>
+      <div class="dm-card"><div class="dm-val" style="color:${losses.total>0?'var(--c-red)':'var(--c-green)'}">${losses.effective.toFixed(1)} Ha</div><div class="dm-lbl">Effective green${losses.total>0?' (▼ '+losses.total.toFixed(1)+' Ha total)':''}</div></div>
       <div class="dm-card"><div class="dm-val" style="color:var(--c-red)">${w.ghg.toFixed(1)} kg</div><div class="dm-lbl">GHG/capita</div></div>
       <div class="dm-card"><div class="dm-val">${w.parques}</div><div class="dm-lbl">No. of parks</div></div>
     </div>
-
+    ${lossRows.length ? `<div style="background:rgba(0,0,0,0.03);border-radius:3px;padding:8px 12px;margin-bottom:12px">${lossRows.join('')}</div>` : ''}
     <div class="drawer-divider"></div>
     <div style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px">Current Climate Situation (${currentYear})</div>
     <div class="drawer-metrics">
@@ -1028,21 +1028,19 @@ function openDrawer(wardId) {
       <div class="dm-card"><div class="dm-val">${Math.round(nd*400).toLocaleString()}</div><div class="dm-lbl">Trees needed</div></div>
       <div class="dm-card"><div class="dm-val" style="color:var(--c-green)">${tp.toLocaleString()}</div><div class="dm-lbl">Cumul. planted</div></div>
     </div>
-
     <div class="drawer-divider"></div>
     <div style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px">Recommended Strategy</div>
     <div class="drawer-strategy">${w.estrategia}</div>
-
     <div class="drawer-divider"></div>
     <div style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">Supplementary Metrics</div>
     <div class="equity-section">
       ${[
-        ['Total GHG',    w.ghgTotal.toLocaleString()+' ton',         w.ghgTotal/16000],
-        ['Electricity',  w.electricidad.toLocaleString()+' kWh',      w.electricidad/80000000],
-        ['Public facilities', w.instalaciones, w.instalaciones/60],
-        ['Green share',  (w.compVerde*100).toFixed(0)+'%',            w.compVerde],
-        ['GHG share',    (w.compGhg*100).toFixed(0)+'%',             w.compGhg],
-      ].map(([lbl,val,pct]) => `
+        ['Total GHG',w.ghgTotal.toLocaleString()+' ton',w.ghgTotal/16000],
+        ['Electricity',w.electricidad.toLocaleString()+' kWh',w.electricidad/80000000],
+        ['Public facilities',w.instalaciones,w.instalaciones/60],
+        ['Green share',(w.compVerde*100).toFixed(0)+'%',w.compVerde],
+        ['GHG share',(w.compGhg*100).toFixed(0)+'%',w.compGhg],
+      ].map(([lbl,val,pct])=>`
         <div class="equity-row">
           <span class="equity-label">${lbl}</span>
           <div style="flex:1;margin:0 12px">
@@ -1052,7 +1050,6 @@ function openDrawer(wardId) {
         </div>`).join('')}
     </div>
   `;
-
   document.getElementById('drawer-overlay').classList.add('open');
 }
 
@@ -1067,22 +1064,20 @@ function closeDrawer(e) {
 // ============================================================
 function refresh(resetSliders=true) {
   rebuildPlanted(currentYear);
-  if(resetSliders) syncSlidersToYear();
-  const cl=readSliders();
-  const pr=pressure(cl);
+  if (resetSliders) syncSlidersToYear();
+  const cl = readSliders();
+  const pr = pressure(cl);
   renderYearSelector();
-  renderClimateStrip(cl,pr);
-  renderScenBar(cl,pr);
-  renderEquityPanel(pr, cl.hotDays);
-  renderActions(cl,pr);
-  renderPriorityList(pr, cl.hotDays);
-  renderHeatmap();
-  renderCharts(cl,pr);
+  renderClimateStrip(cl, pr);
+  renderScenBar(cl, pr);
+  renderEquityPanel(cl);
+  renderActions(cl, pr);
+  renderPriorityList(pr, cl);
 }
 
 function setYear(yr) {
   currentYear = yr;
-  baselineCritical[yr] = null; // new year → fresh baseline
+  baselineCritical[yr] = null;
   syncSlidersToYear();
   refresh(false);
 }
